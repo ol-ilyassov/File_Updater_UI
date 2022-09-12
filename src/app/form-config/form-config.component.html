@@ -1,0 +1,18 @@
+
+<div class="body">
+    <div class="form">
+        <h2>Server Config:</h2>
+
+        <p>Server host:</p>
+        <input id="server_host" name="server_host" type="text" [(ngModel)]="server_host">
+
+        <p>Server port:</p>
+        <input id="server_port" name="server_port" type="text" [(ngModel)]="server_port">
+
+        <p>Disable UI:</p>
+        <input id="disable_ui" name="disable_ui" type="checkbox" [(ngModel)]="disable_ui">
+
+        <button id="btnSave" (click)="save()">Save</button>
+        <p>{{ result }}</p>
+    </div>
+</div>

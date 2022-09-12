@@ -1,0 +1,33 @@
+<mat-toolbar>
+    <button class="menu" mat-icon-button (click)="sidenav.toggle()">
+      <mat-icon *ngIf="!sidenav.opened">menu</mat-icon>
+      <mat-icon *ngIf="sidenav.opened">close</mat-icon>
+    </button>
+  
+    <p class="myTitle">File Updater</p>
+  </mat-toolbar>
+  
+  <mat-sidenav-container>
+    <mat-sidenav #sidenav mode="over">
+        <div>
+          <div class="item" routerLink="shell" routerDirection="root">
+            <a>Shell Tab</a>
+          </div>
+    
+          <div *ngIf="!auth" class="item" routerLink="auth" routerDirection="root">
+            <a>Auth Tab</a>
+          </div>
+    
+          <div *ngIf="auth" class="item" routerLink="form" routerDirection="root">
+            <a>Config Tab</a>
+          </div>
+
+          <div *ngIf="auth" class="item" (click)="logOut()">
+            <a>Logout</a>
+          </div>
+        </div>
+    </mat-sidenav>
+    <mat-sidenav-content>
+      <router-outlet></router-outlet>
+    </mat-sidenav-content>
+  </mat-sidenav-container>

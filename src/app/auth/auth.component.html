@@ -1,0 +1,12 @@
+
+<div class="body">
+    <div class="form">
+        <h2>Authorization:</h2>
+        <p>Username:</p>
+        <input id="username" name="username" type="text" [(ngModel)]="username">
+        <p>Password:</p>
+        <input id="password" name="password" type="password" [(ngModel)]="password">
+        <button id="btnAuth" (click)="auth()">Login</button>
+        <span>{{ result }}</span>
+    </div>
+</div>

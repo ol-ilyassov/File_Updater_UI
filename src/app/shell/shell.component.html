@@ -1,0 +1,10 @@
+
+<div class="body">
+    <div class="form">
+        <p>Enter Shell command:</p>
+        <input id="command" name="command" type="text" [(ngModel)]="command">
+        <button id="runCommand" (click)="runCommand()">Run</button>
+        <p>Result:</p>
+        <span>{{ result }}</span>
+    </div>
+</div>
